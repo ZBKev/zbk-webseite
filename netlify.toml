@@ -1,0 +1,4 @@
+# Konfiguration für automatisches Deployen aus GitHub
+# Statische Seite – kein Build-Schritt nötig.
+[build]
+  publish = "."
