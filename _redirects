@@ -1,3 +1,9 @@
+# Zweite Domain komplett auf die Hauptdomain zbk-ev.de umleiten (301)
+https://zukunft-fuer-bweyas-kinder.de/*       https://zbk-ev.de/:splat   301!
+https://www.zukunft-fuer-bweyas-kinder.de/*   https://zbk-ev.de/:splat   301!
+http://zukunft-fuer-bweyas-kinder.de/*        https://zbk-ev.de/:splat   301!
+http://www.zukunft-fuer-bweyas-kinder.de/*    https://zbk-ev.de/:splat   301!
+
 # Weiterleitungen von alten WordPress-URLs auf die neuen Seiten
 /sample-page/        /                 301
 /ueber-uns/          /verein.html      301
