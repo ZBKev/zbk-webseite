@@ -1,0 +1,11 @@
+# Weiterleitungen von alten WordPress-URLs auf die neuen Seiten
+/sample-page/        /                 301
+/ueber-uns/          /verein.html      301
+/ueber-uns           /verein.html      301
+/impressum/          /impressum.html   301
+/privacy-policy/     /datenschutz.html 301
+/datenschutz/        /datenschutz.html 301
+/kontakt/            /kontakt.html     301
+/spenden/            /spenden.html     301
+/mitglieder          /mitglieder.html  301
+/mitarbeit           /mitmachen.html   301
