@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e2730c">
+<meta name="color-scheme" content="light">
 <title>The Association – Zukunft für Bweyas Kinder e.V.</title>
 <meta name="description" content="The non-profit support association Zukunft für Bweyas Kinder e.V.: mission statement, board, statutes, volunteering and transparency.">
 <link rel="canonical" href="https://zbk-ev.de/en/verein.html">
@@ -18,6 +20,7 @@
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap head-inner">
     <a class="brand" href="index.html">
@@ -41,7 +44,7 @@
     </div>
   </div>
 </header>
-<main>
+<main id="main" tabindex="-1">
 <section class="page-head" style="padding-block:clamp(2.2rem,5vw,3.4rem);"><div class="wrap"><p class="eyebrow">About us</p><h1>The Association</h1><p>Zukunft für Bweyas Kinder e.V. is a non-profit support association based in Kaltenkirchen that supports the Bweya Children&#39;s Home.</p></div></section>
   <section>
     <div class="wrap">
@@ -57,6 +60,7 @@
     </div>
   </section>
 
+<div class="mdonate"><a class="btn btn-gold" href="spenden.html">Donate now</a></div>
 </main>
 <footer class="site-foot">
   <div class="wrap foot-top">
@@ -108,9 +112,24 @@
 </footer>
 
 <script>
-  var b=document.getElementById('burger'),n=document.getElementById('nav');
-  if(b){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu');});
-  n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});}
+  document.documentElement.classList.add('js');
+  (function(){
+    var b=document.getElementById('burger'),n=document.getElementById('nav');
+    var bd=document.createElement('div');bd.className='nav-backdrop';document.body.appendChild(bd);
+    function cl(){n.classList.remove('open');bd.classList.remove('show');if(b){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');}}
+    if(b){
+      b.addEventListener('click',function(){var o=n.classList.toggle('open');bd.classList.toggle('show',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu');});
+      bd.addEventListener('click',cl);
+      n.addEventListener('click',function(e){if(e.target.tagName==='A')cl();});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')cl();});
+    }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+      document.querySelectorAll('main > section').forEach(function(s){io.observe(s);});
+    }else{
+      document.querySelectorAll('main > section').forEach(function(s){s.classList.add('in');});
+    }
+  })();
 </script>
 </body>
 </html>
