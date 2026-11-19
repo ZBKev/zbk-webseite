@@ -302,7 +302,7 @@ html.js main > section.in{opacity:1;transform:none;}
 /* Hero-Balance: längerer Satz als Überschrift, kleineres Akzentbild rechts */
 .hero-inner{grid-template-columns:1.4fr .6fr;align-items:center;}
 .hero h1{font-size:clamp(1.9rem,3.3vw,2.5rem);}
-.hero-figure{max-width:330px;margin-left:auto;}
+.hero-figure{max-width:260px;margin-left:auto;}
 @media (max-width:860px){
   .hero-inner{grid-template-columns:1fr;}
   .hero-figure{max-width:440px;margin-inline:auto;}
