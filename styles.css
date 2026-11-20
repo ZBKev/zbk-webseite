@@ -353,3 +353,8 @@ html.js main > section.in{opacity:1;transform:none;}
 a.card{text-decoration:none;color:inherit;display:block;}
 a.card:hover h3{color:var(--gold-deep);}
 a.card[style*="#fff"]:hover h3{color:var(--gold);}
+
+/* 4-Spalten-Raster (Zukunftsprojekte auf der Startseite) */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;}
+@media (max-width:980px){.grid-4{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.grid-4{grid-template-columns:1fr;}}
