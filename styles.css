@@ -272,9 +272,13 @@ html.js main > section.in{opacity:1;transform:none;}
 .mdonate{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;align-items:center;gap:.6rem;padding:.55rem max(1rem,env(safe-area-inset-left)) calc(.55rem + env(safe-area-inset-bottom)) max(1rem,env(safe-area-inset-right));background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(42,32,24,.12);}
 .mdonate .btn{flex:1;width:100%;padding-block:.9em;font-size:1.05rem;}
 
+/* Abschnitts-Kopf mit Überschrift links und Link rechts */
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem;}
+
 /* =========================  MOBILE REFINEMENTS  ========================= */
 @media (max-width:860px){
   body{font-size:1.02rem;}
+  .section-head{flex-direction:column;align-items:flex-start;gap:.5rem;}
   .wrap{padding-inline:1.1rem;}
   section{padding-block:clamp(2.3rem,8vw,3.3rem);}
   h1{letter-spacing:-.02em;}
