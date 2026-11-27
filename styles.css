@@ -279,6 +279,10 @@ html.js main > section.in{opacity:1;transform:none;}
 .diag-strike{position:relative;display:inline-block;line-height:1;}
 .diag-strike::after{content:"";position:absolute;left:-0.08em;right:-0.08em;top:50%;height:0.1em;background:currentColor;border-radius:1px;transform:translateY(-50%) rotate(-28deg);}
 
+/* Vorstands-Karten: Initialen-Kreis (Platzhalter bis Foto) */
+.avatar{width:84px;height:84px;border-radius:50%;background:var(--green-tint);color:var(--green-deep);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:1.55rem;letter-spacing:.02em;margin:0 auto 1rem;}
+.group-label{font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:2rem 0 1rem;}
+
 /* =========================  MOBILE REFINEMENTS  ========================= */
 @media (max-width:860px){
   body{font-size:1.02rem;}
