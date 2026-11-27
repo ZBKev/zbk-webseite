@@ -275,6 +275,10 @@ html.js main > section.in{opacity:1;transform:none;}
 /* Abschnitts-Kopf mit Überschrift links und Link rechts */
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem;}
 
+/* Schräg (von oben nach unten) durchgestrichene Zahl */
+.diag-strike{position:relative;display:inline-block;line-height:1;}
+.diag-strike::after{content:"";position:absolute;left:-0.08em;right:-0.08em;top:50%;height:0.1em;background:currentColor;border-radius:1px;transform:translateY(-50%) rotate(28deg);}
+
 /* =========================  MOBILE REFINEMENTS  ========================= */
 @media (max-width:860px){
   body{font-size:1.02rem;}
