@@ -283,6 +283,19 @@ html.js main > section.in{opacity:1;transform:none;}
 .avatar{width:84px;height:84px;border-radius:50%;background:var(--green-tint);color:var(--green-deep);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:1.55rem;letter-spacing:.02em;margin:0 auto 1rem;}
 .group-label{font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:2rem 0 1rem;}
 
+/* Schlichtes Balkendiagramm (ohne Bibliothek) */
+.barchart{margin:1.4rem 0 .4rem;}
+.bar-row{display:grid;grid-template-columns:minmax(8rem,14rem) 1fr auto;align-items:center;gap:.9rem;margin:.6rem 0;}
+.bar-label{font-weight:600;}
+.bar-track{background:var(--sand);border-radius:7px;height:1.5rem;overflow:hidden;}
+.bar-fill{height:100%;border-radius:7px;min-width:3px;}
+.bar-val{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.bar-sub{color:var(--ink-soft);font-weight:500;}
+@media(max-width:560px){
+  .bar-row{grid-template-columns:1fr auto;gap:.3rem .9rem;}
+  .bar-track{grid-column:1 / -1;}
+}
+
 /* =========================  MOBILE REFINEMENTS  ========================= */
 @media (max-width:860px){
   body{font-size:1.02rem;}
