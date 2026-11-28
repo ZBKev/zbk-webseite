@@ -117,7 +117,8 @@ h3{font-size:1.35rem;margin-bottom:.5rem;}
 
 .goal{margin:1.2rem 0;padding:1.1rem 1.3rem;border-left:4px solid var(--gold);background:var(--sand);border-radius:0 10px 10px 0;}
 .promise{margin:1.4rem 0;padding:1.3rem 1.5rem;border-radius:var(--radius);background:var(--teal-tint);border:1px solid #d4e4dd;}
-.promise strong{font-family:var(--serif);font-size:1.15rem;display:block;margin-bottom:.3rem;color:var(--teal-deep);}
+.promise > strong{font-family:var(--serif);font-size:1.15rem;display:block;margin-bottom:.3rem;color:var(--teal-deep);}
+.promise p strong{color:var(--teal-deep);}
 .promise p{color:var(--ink-soft);margin:0;}
 
 .figure{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--green-tint);display:grid;place-items:center;text-align:center;border:1px solid var(--line);}
